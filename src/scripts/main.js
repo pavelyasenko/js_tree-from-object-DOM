@@ -41,5 +41,4 @@ function createTree(element, data) {
 
   element.appendChild(ul);
 }
-
 createTree(tree, food);
