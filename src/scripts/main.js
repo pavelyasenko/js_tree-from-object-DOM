@@ -21,9 +21,9 @@ const food = {
 const tree = document.querySelector('#tree');
 
 function createTree(element, data) {
-  const div = document.createElement('div');
-
-  div.setAttribute('id', 'tree');
+  if (!Object.keys(data).length) {
+    return;
+  }
 
   const ul = document.createElement('ul');
 
@@ -32,10 +32,13 @@ function createTree(element, data) {
 
     li.textContent = key;
 
-    createTree(li, data[key]);
+    if (Object.keys(data[key]).length > 0) {
+      createTree(li, data[key]);
+    }
 
     ul.appendChild(li);
   }
+
   element.appendChild(ul);
 }
 
