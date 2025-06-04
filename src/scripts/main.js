@@ -21,6 +21,7 @@ const food = {
 const container = document.createElement('div');
 
 container.id = 'tree';
+
 document.body.appendChild(container);
 
 const tree = document.querySelector('#tree');
